@@ -2,13 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 
-$conn = new mysqli("localhost", "root", "", "grp");
-$conn->set_charset("utf8mb4");
-
-if ($conn->connect_error) {
-    echo json_encode(["status" => false]);
-    exit;
-}
+include "../config.php";
 
 $today = date("Y-m-d");
 

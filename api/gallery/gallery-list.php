@@ -2,8 +2,8 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 
-$conn = new mysqli("localhost", "root", "", "grp");
-$conn->set_charset("utf8mb4");
+include "../config.php";
+
 
 $res = $conn->query("
     SELECT id, title, category, image_path, created_at

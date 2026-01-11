@@ -11,12 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
-$conn = new mysqli("localhost", "root", "", "grp");
-
-if ($conn->connect_error) {
-    echo json_encode([]);
-    exit;
-}
+include "../config.php";
 
 $result = $conn->query("SELECT * FROM video_testimonials ORDER BY id DESC");
 

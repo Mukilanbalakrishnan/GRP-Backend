@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 
 
-$conn = new mysqli("localhost","root","","grp");
+include "../config.php";
 
 $stmt = $conn->prepare("
 UPDATE text_testimonials SET

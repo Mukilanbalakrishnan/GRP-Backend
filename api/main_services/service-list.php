@@ -2,13 +2,10 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 
-$conn = new mysqli("localhost", "root", "", "grp");
+include "../config.php";
 $conn->set_charset("utf8mb4");
 
-if ($conn->connect_error) {
-    echo json_encode(["status" => false, "message" => "DB error"]);
-    exit;
-}
+
 
 $result = $conn->query("
     SELECT 

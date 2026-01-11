@@ -16,17 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 // =======================
 // DATABASE
 // =======================
-$conn = new mysqli("localhost", "root", "", "grp");
+include "../config.php";
 $conn->set_charset("utf8mb4");
 
-if ($conn->connect_error) {
-    http_response_code(500);
-    echo json_encode([
-        "status" => false,
-        "message" => "DB connection failed"
-    ]);
-    exit;
-}
 
 // =======================
 // READ JSON INPUT

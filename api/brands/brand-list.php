@@ -2,11 +2,7 @@
 header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 
-$conn = new mysqli("localhost", "root", "", "grp");
-if ($conn->connect_error) {
-    echo json_encode([]);
-    exit;
-}
+include "../config.php";
 
 $result = $conn->query("SELECT * FROM brands ORDER BY position ASC, id DESC");
 

@@ -39,15 +39,7 @@ if (!$name || !$email || !$phone || !$message) {
 }
 
 // ✅ Database connection
-$conn = new mysqli("localhost", "root", "", "grp");
-
-if ($conn->connect_error) {
-    echo json_encode([
-        "status" => false,
-        "message" => "Database connection failed"
-    ]);
-    exit;
-}
+include "config.php";
 
 // ✅ Insert enquiry
 $stmt = $conn->prepare(

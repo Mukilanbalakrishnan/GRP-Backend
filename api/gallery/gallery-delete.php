@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
-$conn = new mysqli("localhost", "root", "", "grp");
+include "../config.php";
 
 $ids = $_POST['ids'] ?? [];
 

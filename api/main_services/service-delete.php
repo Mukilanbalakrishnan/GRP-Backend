@@ -4,7 +4,7 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json");
 
-$conn = new mysqli("localhost", "root", "", "grp");
+include "../config.php";
 $conn->set_charset("utf8mb4");
 
 $data = json_decode(file_get_contents("php://input"), true);

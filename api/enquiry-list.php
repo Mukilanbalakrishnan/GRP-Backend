@@ -2,12 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 
-$conn = new mysqli("localhost", "root", "", "grp");
-
-if ($conn->connect_error) {
-    echo json_encode(["status" => false, "message" => "DB connection failed"]);
-    exit;
-}
+include "config.php";
 
 $sql = "SELECT id, name, phone, email, message, created_at 
         FROM enquiries 

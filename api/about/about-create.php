@@ -4,11 +4,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 
-$conn = new mysqli("localhost", "root", "", "grp");
-if ($conn->connect_error) {
-    echo json_encode(["status"=>false,"message"=>"DB error"]);
-    exit;
-}
+include "../config.php";
 
 $name = $_POST['name'] ?? '';
 $role = $_POST['role'] ?? '';

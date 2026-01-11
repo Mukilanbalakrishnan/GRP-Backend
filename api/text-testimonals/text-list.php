@@ -12,8 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 
-
-$conn = new mysqli("localhost","root","","grp");
+include "../config.php";
 $res = $conn->query("SELECT * FROM text_testimonials ORDER BY id DESC");
 
 $data = [];

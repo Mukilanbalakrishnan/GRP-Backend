@@ -14,8 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-// 🔴 DB CONNECTION
-$conn = new mysqli("localhost", "root", "", "grp");
+include "../config.php";
 $conn->set_charset("utf8mb4");
 
 $data = json_decode(file_get_contents("php://input"), true);

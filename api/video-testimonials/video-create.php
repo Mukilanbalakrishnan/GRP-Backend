@@ -6,11 +6,7 @@ header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 
-$conn = new mysqli("localhost", "root", "", "grp");
-if ($conn->connect_error) {
-    echo json_encode(["status" => false, "message" => "DB connection failed"]);
-    exit;
-}
+include "../config.php";
 
 // ✅ REQUIRED FIELDS CHECK
 $required = ["name", "role", "title", "video_url", "thumbnail", "rating", "quote", "duration"];

@@ -6,7 +6,7 @@ header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 
-$conn = new mysqli("localhost","root","","grp");
+include "../config.php";
 
 $id = $_POST['id'];
 $conn->query("DELETE FROM video_testimonials WHERE id=$id");

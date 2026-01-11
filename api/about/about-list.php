@@ -2,7 +2,7 @@
 header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 
-$conn = new mysqli("localhost", "root", "", "grp");
+include "../config.php";
 
 $res = $conn->query("SELECT * FROM about_reviews ORDER BY id DESC");
 $data = [];

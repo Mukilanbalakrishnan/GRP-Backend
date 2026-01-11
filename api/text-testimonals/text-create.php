@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 
-$conn = new mysqli("localhost","root","","grp");
+include "../config.php";
 
 $required = ["name","text","rating"];
 foreach($required as $f){

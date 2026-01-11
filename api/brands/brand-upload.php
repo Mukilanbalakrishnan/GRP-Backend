@@ -7,11 +7,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Methods: POST"); 
 
-$conn = new mysqli("localhost", "root", "", "grp");
-if ($conn->connect_error) {
-    echo json_encode(["status" => false, "message" => "DB error"]);
-    exit;
-}
+include "../config.php";
 
 $name = $_POST['name'] ?? '';
 $gradient = $_POST['gradient'] ?? '';

@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 
 
-$conn = new mysqli("localhost","root","","grp");
+include "../config.php";
 
 $stmt = $conn->prepare("DELETE FROM text_testimonials WHERE id=?");
 $stmt->bind_param("i", $_POST['id']);

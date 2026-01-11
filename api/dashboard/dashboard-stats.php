@@ -9,13 +9,7 @@ header("Content-Type: application/json");
 // =======================
 // DB
 // =======================
-$conn = new mysqli("localhost", "root", "", "grp");
-$conn->set_charset("utf8mb4");
-
-if ($conn->connect_error) {
-    echo json_encode(["status" => false]);
-    exit;
-}
+include "../config.php";
 
 // =======================
 // COUNTS

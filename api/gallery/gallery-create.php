@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 try {
-    $conn = new mysqli("localhost", "root", "", "grp");
+    include "../config.php";
     $conn->set_charset("utf8mb4");
 
     $title    = $_POST['title'] ?? '';
